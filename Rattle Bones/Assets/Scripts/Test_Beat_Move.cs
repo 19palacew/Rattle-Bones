@@ -27,7 +27,6 @@ public class Test_Beat_Move : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Death();
-        print(time);
+        Death();
     }
 }
