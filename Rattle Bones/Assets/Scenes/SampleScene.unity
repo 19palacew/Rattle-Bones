@@ -217,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 129
   songDelay: 0
-  beat: {fileID: 2444795123765661079, guid: dad4067a625895c499f8effd5ea05eda, type: 3}
+  beat: {fileID: 1816600901800746622, guid: 24e87d18a72cefb4dbeaf49b71f0fcc9, type: 3}
   song: {fileID: 8300000, guid: ebc35632eee567b49a39be97ca6f0738, type: 3}
 --- !u!4 &635880509
 Transform:
@@ -250,7 +250,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ebc35632eee567b49a39be97ca6f0738, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
