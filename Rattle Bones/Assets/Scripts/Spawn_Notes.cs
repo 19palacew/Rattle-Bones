@@ -11,7 +11,12 @@ public class Spawn_Notes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnNote", songDelay, 1/(bpm/60f));
+        InvokeRepeating("SpawnNote", 0, 1/(bpm/60f));
+        Invoke("PlaySong", songDelay);
+    }
+
+    private void PlaySong()
+    {
         AudioSource speaker = GetComponent<AudioSource>();
         speaker.clip = song;
         speaker.Play();
