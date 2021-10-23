@@ -14,7 +14,7 @@ public class Test_Beat_Move : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(new Vector3(0,0,speed));
         time += Time.deltaTime;
@@ -27,6 +27,7 @@ public class Test_Beat_Move : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Death();
+        //Death();
+        print(time);
     }
 }
