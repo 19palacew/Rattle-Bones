@@ -40,7 +40,7 @@ public class Stick_Control : MonoBehaviour
             {
                 ani.SetBool("Attack", false);
             }
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -6, -.5f), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -7, -.5f), transform.position.y, transform.position.z);
         }
         else
         {
@@ -60,7 +60,7 @@ public class Stick_Control : MonoBehaviour
             {
                 ani.SetBool("Attack", false);
             }
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, .5f, 6), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp(transform.position.x, .5f, 7), transform.position.y, transform.position.z);
         }
         rb.velocity = movement + new Vector3(0, rb.velocity.y, 0);         
     }
