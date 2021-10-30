@@ -24,6 +24,6 @@ public class Spawn_Notes : MonoBehaviour
 
     private void SpawnNote()
     {
-        Instantiate(beat, transform.GetChild(Random.Range(0,5)));
+        Instantiate(beat, transform.GetChild(Random.Range(0,6)));
     }
 }
