@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Score
   - Turbo
+  - Combo
   layers:
   - Default
   - TransparentFX

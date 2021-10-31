@@ -13,6 +13,7 @@ public class TurboMode : MonoBehaviour
     private Gradient gradDef;
     private Gradient chargeGrad;
     private HealthBar healthScript;
+    private GameObject combo;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +29,8 @@ public class TurboMode : MonoBehaviour
         alphaKey = new GradientAlphaKey[2];
         alphaKey[0].alpha = 1.0f;
         chargeGrad.SetKeys(colorKey, alphaKey);
-
-        //charge = 1;
-
+        combo = GameObject.FindGameObjectWithTag("Combo");
+        combo.GetComponent<Text>().enabled = false;
     }
 
     // Update is called once per frame
@@ -44,6 +44,7 @@ public class TurboMode : MonoBehaviour
             cooldown = false;
             overcharged = true;
             healthScript.gradient = chargeGrad;
+            combo.GetComponent<Text>().enabled = true;
         }
     }
 
@@ -53,5 +54,6 @@ public class TurboMode : MonoBehaviour
         cooldown = true;
         overcharged = false;
         healthScript.gradient = gradDef;
+        combo.GetComponent<Text>().enabled = false;
     }
 }
