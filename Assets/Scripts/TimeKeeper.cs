@@ -34,10 +34,11 @@ public class TimeKeeper : MonoBehaviour
     
     private void endGame() 
     {
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
         //pause the game
         
         //spawn the End Game
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    
     }
 }
