@@ -8,6 +8,8 @@ public class Test_Beat_Move : MonoBehaviour
     public float time;
     public Score scoreScript;
     public TurboMode turboScript;
+
+    public GameObject crush;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class Test_Beat_Move : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Instantiate(crush, other.transform).transform.parent = null;
         if (!turboScript.overcharged)
         {
             scoreScript.score += 10;
