@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TimeKeeper : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class TimeKeeper : MonoBehaviour
         Time.timeScale = 0;
         //pause the game
         
-        //spawn the menu
+        //spawn the End Game
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
