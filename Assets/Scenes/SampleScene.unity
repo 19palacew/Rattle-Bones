@@ -4287,7 +4287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf68aa8af829d44cbd4a076c10cfbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5500
+  speed: 1200
   whamSpeed: 0.1
   resetTime: 0.1
   animationTime: 0.5
@@ -7216,7 +7216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf68aa8af829d44cbd4a076c10cfbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5500
+  speed: 1200
   whamSpeed: 0.1
   resetTime: 0.1
   animationTime: 0.5
