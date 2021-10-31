@@ -458,6 +458,7 @@ GameObject:
   - component: {fileID: 311032293}
   - component: {fileID: 311032295}
   - component: {fileID: 311032294}
+  - component: {fileID: 311032296}
   m_Layer: 5
   m_Name: Timer (Number)
   m_TagString: Untagged
@@ -526,6 +527,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311032292}
   m_CullTransparentMesh: 1
+--- !u!114 &311032296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311032292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9e7343f7fc3b3e4f89c1c1459678e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &311293409
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1594,7 @@ GameObject:
   - component: {fileID: 752796169}
   m_Layer: 5
   m_Name: Score (Number)
-  m_TagString: Untagged
+  m_TagString: Score
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1659,6 +1672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07ed1379d4336f45bb89af1864e0c6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
 --- !u!1 &757390115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,7 +1918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.27179718, y: 0.06799984}
+  m_AnchoredPosition: {x: 0.27178955, y: 0.06799984}
   m_SizeDelta: {x: -1.6311, y: -1.4953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &975509187
@@ -3753,9 +3767,10 @@ GameObject:
   - component: {fileID: 2016412191}
   - component: {fileID: 2016412193}
   - component: {fileID: 2016412192}
+  - component: {fileID: 2016412194}
   m_Layer: 5
   m_Name: Healthbar
-  m_TagString: Untagged
+  m_TagString: Turbo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3797,16 +3812,16 @@ MonoBehaviour:
   healthSlider: {fileID: 2016412193}
   gradient:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
+    key0: {r: 0.3802278, g: 1, b: 0, a: 1}
     key1: {r: 0.98765564, g: 1, b: 0, a: 1}
-    key2: {r: 0.3802278, g: 1, b: 0, a: 1}
+    key2: {r: 1, g: 0, b: 0, a: 1}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 22359
-    ctime1: 44718
+    ctime0: 20239
+    ctime1: 42598
     ctime2: 65535
     ctime3: 0
     ctime4: 0
@@ -3876,6 +3891,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2016412194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016412190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf5b6bd741ccab4895951065d04c10d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charge: 0
+  overchargeTime: 5
+  overcharged: 0
 --- !u!1 &2027970457
 GameObject:
   m_ObjectHideFlags: 0
