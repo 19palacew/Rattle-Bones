@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0024017952, g: 0.0074163997, b: 0.047971413, a: 1}
+  m_IndirectSpecularColor: {r: 0.0024131858, g: 0.0074204924, b: 0.048049778, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1270,6 +1270,7 @@ MonoBehaviour:
   bpm: 129
   songDelay: 2.26
   beat: {fileID: 1816600901800746622, guid: 24e87d18a72cefb4dbeaf49b71f0fcc9, type: 3}
+  explosion: {fileID: 960656588075741121, guid: 763b0a398dd63647eb88b6913c865405, type: 3}
   song: {fileID: 8300000, guid: ebc35632eee567b49a39be97ca6f0738, type: 3}
 --- !u!4 &635880509
 Transform:
