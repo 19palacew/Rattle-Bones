@@ -9,59 +9,55 @@ public class Stick_Control : MonoBehaviour
     public float resetTime;
     public float animationTime;
     public bool isLeft;
-    private Rigidbody rb;
     private Animator ani;
+    private KeyCode right;
+    private KeyCode left;
+    private KeyCode up;
+    private float upperBound;
+    private float lowerBound;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         ani = GetComponent<Animator>();
+        if (isLeft)
+        {
+            right = KeyCode.D;
+            left = KeyCode.A;
+            up = KeyCode.W;
+            upperBound = -1.75f;
+            lowerBound = -9;
+        }
+        else
+        {
+            right = KeyCode.RightArrow;
+            left = KeyCode.LeftArrow;
+            up = KeyCode.UpArrow;
+            upperBound = 9;
+            lowerBound = 1.75f;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 movement = new Vector3(0, 0, 0);
-        if (isLeft)
+        Vector3 movement = new Vector3();
+        if (Input.GetKey(right))
         {
-            if (Input.GetKey("d"))
-            {
-                movement += (Vector3.right * speed) * Time.deltaTime;
-            }
-            if (Input.GetKey("a"))
-            {
-                movement += (Vector3.left * speed) * Time.deltaTime;
-            }
-            if (Input.GetKeyDown("w"))
-            {
-                ani.SetBool("Attack", true);
-            }
-            else
-            {
-                ani.SetBool("Attack", false);
-            }
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, -9, -1.75f), transform.position.y, transform.position.z);
+            movement += (Vector3.right * -speed);
+        }
+        if (Input.GetKey(left))
+        {
+            movement += (Vector3.left * -speed);
+        }
+        if (Input.GetKeyDown(up))
+        {
+            ani.SetBool("Attack", true);
         }
         else
         {
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                movement += (Vector3.right * speed) * Time.deltaTime;
-            }
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                movement += (Vector3.left * speed) * Time.deltaTime;
-            }
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                ani.SetBool("Attack", true);
-            }
-            else
-            {
-                ani.SetBool("Attack", false);
-            }
-            transform.position = new Vector3(Mathf.Clamp(transform.position.x, 1.75f, 9), transform.position.y, transform.position.z);
+            ani.SetBool("Attack", false);
         }
-        rb.velocity = movement + new Vector3(0, rb.velocity.y, 0);         
+        transform.Translate(movement*Time.deltaTime);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, lowerBound, upperBound), transform.position.y, transform.position.z);
     }
 }
