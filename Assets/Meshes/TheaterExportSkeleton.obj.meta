@@ -1,20 +1,8 @@
 fileFormatVersion: 2
-guid: c8d7a8c5059d55047b9511228dab0cbc
+guid: 539fce0571ed30f4aa2e2b356900add6
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable:
-  - first:
-      74: 4462391087200987511
-    second: Armature|Drum_Beat
-  - first:
-      74: -8945691123924629249
-    second: Armature|Idle
-  - first:
-      74: -3454566047683785836
-    second: Armature|Armature|Armature|Drum_Beat|Armature|Drum_Beat
-  - first:
-      74: 3949184196891408138
-    second: Armature|Armature|Armature|Idle|Armature|Idle
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2
